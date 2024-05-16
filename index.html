@@ -19,7 +19,7 @@
     <!-- Container del body -->
     <div class="container">
         <!-- App -->
-        <div class="app border border-secondary-subtle m-auto bg-light d-flex">
+        <div class="app shadow m-auto bg-light d-flex">
 
             <!-- Parte di sinistra -->
             <div id="left" class="border-end border-dark">
@@ -34,7 +34,7 @@
                     <div class="d-flex text-muted align-items-center">
                         <a href="#" class="text-secondary"><i class="fa-solid fa-circle-notch mx-2"></i></a>
                         <a href="#" class="text-secondary"><i class="fa-solid fa-message mx-2"></i></a>
-                        <a href="#" class="text-secondary"><i class="fa-solid fa-ellipsis-vertical mx-2"></i></a>
+                        <a href="#" class="text-secondary"><i class="fa-solid fa-ellipsis-vertical mx-2 me-4"></i></a>
                     </div>
 
                 </div>
@@ -66,7 +66,7 @@
                 <!-- Lista Contatti-->
                 <div class="container-contatti p-2 overflow-auto border-top border-dark">
                     <!-- Contatto singolo, da fare col for -->
-                    <div class="d-flex w-100">
+                    <div class="d-flex w-100 my-2">
                         <div class="mx-2">
                             <img :src="contattoImmagine()" alt="">
                         </div>
@@ -105,7 +105,7 @@
                     <div class="d-flex text-muted align-items-center">
                         <a href="#" class="text-secondary"><i class="fa-solid fa-magnifying-glass mx-2"></i></a>
                         <a href="#" class="text-secondary"><i class="fa-solid fa-paperclip mx-2"></i></a>
-                        <a href="#" class="text-secondary"><i class="fa-solid fa-ellipsis-vertical mx-2"></i></a>
+                        <a href="#" class="text-secondary"><i class="fa-solid fa-ellipsis-vertical mx-2 me-4"></i></a>
                     </div>
                 </div>
 
@@ -145,8 +145,8 @@
                 </div>
 
                 <!-- Sotto i messaggi -->
-                <div>
-                    <div class="undermsg m-2 d-flex justify-content-around align-items-center vertical-align-middle">
+                <div class="undermsg">
+                    <div class="m-2 mt-0 h-100 d-flex justify-content-around align-items-center vertical-align-middle">
                         <a href="#" class="text-secondary"><i class="fa-regular fa-face-smile mx-3 text-secondary"></i></a>
                         <input type="text" class="form-control text-secondary mx-3 text-secondary"
                             placeholder="Cerca o inizia una nuova chat" aria-label="Username"
