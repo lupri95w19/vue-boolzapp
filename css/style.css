@@ -9,7 +9,8 @@ body {
 .app {
     width: 100%;
 }
-.user{
+
+.user {
     height: 5rem;
 }
 
@@ -21,10 +22,34 @@ body {
     width: 70%;
 }
 
-i{
+i {
     font-size: 1.5rem;
 }
 
-.container-contatti{
+.container-contatti,
+.messaggi {
     height: 70vh;
+}
+
+.ourMessage {
+    text-align: right;
+    /* width: 100%; */
+    display: inline-block;
+    text-align: right;
+    padding: 1rem;
+    background-color: chartreuse;
+}
+
+.ourMessage span {}
+
+.contactMessage {
+    text-align: left;
+}
+
+.hour {
+    font-size: 0.7rem;
+}
+
+.message{
+    border-radius: 0.7rem;
 }
