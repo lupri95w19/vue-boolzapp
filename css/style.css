@@ -37,6 +37,14 @@ i {
     overflow: auto;
 }
 
+.msgTabHover:hover{
+    transition: 0.3s ease-in-out;
+    background-color: lightgray;
+}
+.msgTabHover:not(:hover){
+    transition: 0.3s ease-in-out;
+}
+
 .ourMessage {
     text-align: right;
     /* width: 100%; */
