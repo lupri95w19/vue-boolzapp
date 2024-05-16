@@ -24,14 +24,13 @@
             <!-- Parte di sinistra -->
             <div id="left" class="border-end border-dark">
                 <!-- Proprio user -->
-
-                <div class="user w-100 h-100 py-2 d-flex justify-content-between ">
+                <div class="user w-100 py-2 d-flex justify-content-between">
                     <div class="d-flex mx-2 py-1 align-items-center">
                         <img :src="utenteImmagine()" alt="">
                         <h6>{{contatto.nome}}</h6>
                     </div>
-                    <!-- Icone -->
 
+                    <!-- Icone -->
                     <div class="user d-flex text-muted align-items-center">
                         <i class="fa-solid fa-circle-notch mx-2"></i>
                         <i class="fa-solid fa-message mx-2"></i>
@@ -39,25 +38,47 @@
                     </div>
 
                 </div>
-                <div class="w-100 h-100 py-2 bg-info align-items-center d-flex">
-                    <i class="fa-regular fa-bell-slash text-info border bg-light rounded-circle p-3 mx-2"></i>
+                <!-- Ricevi notifiche -->
+                <div class="w-100 py-2 bg-info align-items-center d-flex">
+                    <i class="fa-regular fa-bell-slash text-info border bg-light rounded-circle p-3 mx-2 fs-3"></i>
                     <div class="notification w-100 m-auto">
                         <p class="m-0">Ricevi notifiche di nuovi messaggi</p>
                         <p class="text-decoration-underline text-secondary m-0">Attiva notifiche desktop</p>
                     </div>
-                    
+                </div>
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-light bg-light w-100">
+                    <form class="form-inline w-100 mx-2">
+                        <div class="input-group">
+                            <div class="input-group-prepend align-self-center me-2">
+                                <i class="fa-solid fa-magnifying-glass m-auto fs-5 text-secondary"></i>
+                            </div>
+                            <input type="text" class="form-control text-secondary"
+                                placeholder="Cerca o inizia una nuova chat" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </form>
+                </nav>
+
+                <!-- Lista Contatti-->
+                <div class="container-contatti">
+                    <!-- Contatto singolo, da fare col for -->
+                    <div>
+                        <img :src="contattoImmagine()" alt="">
+                    </div>
                 </div>
             </div>
 
             <!-- Parte di destra -->
             <div id="right">
                 <div class="user w-100 py-2 d-flex justify-content-between">
-                    <div class="mx-2 py-1 align-items-center">
-                        <div class="d-flex">
+                    <div class="user mx-2 my-auto text-muted align-items-center">
+                        <div class="d-flex my-auto">
                             <img :src="utenteImmagine()" alt="">
                             <h6>{{contatto.nome}}</h6>
                         </div>
-                        Ultimo accesso
+                        <p>Ultimo accesso</p>
                     </div>
                     <!-- Icone -->
                     <div class="user d-flex text-muted align-items-center">
