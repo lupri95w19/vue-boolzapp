@@ -19,7 +19,7 @@
     <!-- Container del body -->
     <div class="container">
         <!-- App -->
-        <div class="app my-3 m-auto bg-light d-flex">
+        <div class="app border border-secondary-subtle m-auto bg-light d-flex">
 
             <!-- Parte di sinistra -->
             <div id="left" class="border-end border-dark">
@@ -32,20 +32,20 @@
 
                     <!-- Icone -->
                     <div class="d-flex text-muted align-items-center">
-                        <i class="fa-solid fa-circle-notch mx-2"></i>
-                        <i class="fa-solid fa-message mx-2"></i>
-                        <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
+                        <a href="#" class="text-secondary"><i class="fa-solid fa-circle-notch mx-2"></i></a>
+                        <a href="#" class="text-secondary"><i class="fa-solid fa-message mx-2"></i></a>
+                        <a href="#" class="text-secondary"><i class="fa-solid fa-ellipsis-vertical mx-2"></i></a>
                     </div>
 
                 </div>
                 <!-- Ricevi notifiche -->
                 <div class="w-100 py-2 bg-info align-items-center d-flex">
-                    <a href="*">
+                    <a href="#">
                         <i
                             class="fa-regular fa-bell-slash text-info border bg-light rounded-circle p-3 mx-2 fs-3"></i></a>
                     <div class="notification w-100 m-auto">
                         <p class="m-0">Ricevi notifiche di nuovi messaggi</p>
-                        <a class="text-decoration-underline text-secondary m-0">Attiva notifiche desktop</a>
+                        <a class="text-decoration-underline text-secondary m-0" href="#">Attiva notifiche desktop</a>
                     </div>
                 </div>
 
@@ -54,7 +54,7 @@
                     <form class="form-inline w-100 mx-2">
                         <div class="input-group">
                             <div class="input-group-prepend align-self-center me-2">
-                                <i class="fa-solid fa-magnifying-glass m-auto fs-5 text-secondary"></i>
+                                <a href="#"><i class="fa-solid fa-magnifying-glass m-auto fs-5 text-secondary"></i></a>
                             </div>
                             <input type="text" class="form-control text-secondary"
                                 placeholder="Cerca o inizia una nuova chat" aria-label="Username"
@@ -103,32 +103,55 @@
                     </div>
                     <!-- Icone -->
                     <div class="d-flex text-muted align-items-center">
-                        <i class="fa-solid fa-magnifying-glass mx-2"></i>
-                        <i class="fa-solid fa-paperclip mx-2"></i>
-                        <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
+                        <a href="#" class="text-secondary"><i class="fa-solid fa-magnifying-glass mx-2"></i></a>
+                        <a href="#" class="text-secondary"><i class="fa-solid fa-paperclip mx-2"></i></a>
+                        <a href="#" class="text-secondary"><i class="fa-solid fa-ellipsis-vertical mx-2"></i></a>
                     </div>
                 </div>
 
-                <div class="bg-primary">
+                <!-- Box messaggi -->
+                <div class="bg-primary prova">
                     <div class="messaggi w-75 m-auto">
+
+                        <!-- Singolo messaggio -->
                         <div class="d-flex justify-content-end">
-                            <div class="d-inline-block ourMessage message my-2 p-1" mt-4>
+                            <div class="d-inline ourMessage message my-2 p-1" mt-4>
                                 <!-- Mettere il testo a sinistra -->
-                                <span class="px-4 my-0 text">{{ourMsg}}</span>
+                                <span class="text">{{ourMsg}}</span>
                                 <p class="hour my-0">12:00</p>
                             </div>
                         </div>
 
+                        <!-- Singolo messaggio -->
                         <div class="d-flex justify-content-end">
-                            <div class="d-inline-block ourMessage message my-2">
-                                <span class="p-3">{{ourMsg}}</span>
-                                <p class="hour">12:00</p>
+                            <div class="d-inline ourMessage message my-2 p-1" mt-4>
+                                <!-- Mettere il testo a sinistra -->
+                                <span class="my-0 text">{{ourMsg}}</span>
+                                <p class="hour my-0">12:00</p>
                             </div>
                         </div>
-                        
-                        <div>
-                            <p class="contactMessage message">{{contactMessage}}</p>
+
+                        <!-- Singolo messaggio del contatto -->
+                        <div class="d-flex justify-content-start">
+                            <div class="d-inline contactMessage message my-2 p-1 mw-50" mt-4>
+                                <!-- Mettere il testo a sinistra -->
+                                <span class="my-0 text">{{contactMsg}}</span>
+                                <p class="hour text-end my-0">12:00</p>
+                            </div>
                         </div>
+
+
+                    </div>
+                </div>
+
+                <!-- Sotto i messaggi -->
+                <div>
+                    <div class="undermsg m-2 d-flex justify-content-around align-items-center vertical-align-middle">
+                        <a href="#" class="text-secondary"><i class="fa-regular fa-face-smile mx-3 text-secondary"></i></a>
+                        <input type="text" class="form-control text-secondary mx-3 text-secondary"
+                            placeholder="Cerca o inizia una nuova chat" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                        <a href="#" class="text-secondary"><i class="fa-solid fa-microphone mx-3 text-secondary"></i></a>
 
                     </div>
                 </div>
