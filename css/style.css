@@ -12,6 +12,10 @@ body {
     height: 95vh;
     /* height: calc(100vh - 2rem); */
 }
+.avatarUser{
+    width: 35px;
+    height: 35px;
+}
 
 .user {
     height: 10%;
@@ -35,6 +39,9 @@ i {
 .messaggi {
     height: 50vh;
     overflow: auto;
+}
+.avatar{
+    width: 50px;
 }
 
 .msgTabHover:hover{
