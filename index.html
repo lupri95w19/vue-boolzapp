@@ -31,19 +31,21 @@
                     </div>
 
                     <!-- Icone -->
-                    <div class="user d-flex text-muted align-items-center">
+                    <div class="d-flex text-muted align-items-center">
                         <i class="fa-solid fa-circle-notch mx-2"></i>
                         <i class="fa-solid fa-message mx-2"></i>
-                        <i class="fa-solid fa-ellipsis-vertical mx-2 me-3"></i>
+                        <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
                     </div>
 
                 </div>
                 <!-- Ricevi notifiche -->
                 <div class="w-100 py-2 bg-info align-items-center d-flex">
-                    <i class="fa-regular fa-bell-slash text-info border bg-light rounded-circle p-3 mx-2 fs-3"></i>
+                    <a href="*">
+                        <i
+                            class="fa-regular fa-bell-slash text-info border bg-light rounded-circle p-3 mx-2 fs-3"></i></a>
                     <div class="notification w-100 m-auto">
                         <p class="m-0">Ricevi notifiche di nuovi messaggi</p>
-                        <p class="text-decoration-underline text-secondary m-0">Attiva notifiche desktop</p>
+                        <a class="text-decoration-underline text-secondary m-0">Attiva notifiche desktop</a>
                     </div>
                 </div>
 
@@ -62,29 +64,44 @@
                 </nav>
 
                 <!-- Lista Contatti-->
-                <div class="container-contatti">
+                <div class="container-contatti p-2 overflow-auto border-top border-dark">
                     <!-- Contatto singolo, da fare col for -->
-                    <div>
-                        <img :src="contattoImmagine()" alt="">
+                    <div class="d-flex w-100">
+                        <div class="mx-2">
+                            <img :src="contattoImmagine()" alt="">
+                        </div>
+                        <div>
+                            <h6>{{nomeContatto}}</h6>
+                            <p>Ultimo messaggio inviato</p>
+                        </div>
+                        <div>
+                            <p class="text-right">12:00</p>
+                        </div>
+
                     </div>
+                    
+
                 </div>
             </div>
 
             <!-- Parte di destra -->
             <div id="right">
                 <div class="user w-100 py-2 d-flex justify-content-between">
-                    <div class="user mx-2 my-auto text-muted align-items-center">
+                    <div class="d-flex mx-2 my-auto text-muted align-items-center">
                         <div class="d-flex my-auto">
                             <img :src="utenteImmagine()" alt="">
-                            <h6>{{contatto.nome}}</h6>
                         </div>
-                        <p>Ultimo accesso</p>
+                        <div>
+                            <h6>{{contatto.nome}}</h6>
+                            <p>Ultimo accesso</p>
+                        </div>
+
                     </div>
                     <!-- Icone -->
-                    <div class="user d-flex text-muted align-items-center">
+                    <div class="d-flex text-muted align-items-center">
                         <i class="fa-solid fa-magnifying-glass mx-2"></i>
                         <i class="fa-solid fa-paperclip mx-2"></i>
-                        <i class="fa-solid fa-ellipsis-vertical mx-2 me-3"></i>
+                        <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
                     </div>
                 </div>
 
