@@ -17,6 +17,7 @@ const configurazione = {
             myProfile: 'Luca',
             immagine: './img/Io.png',
             nomeContatto: 'prova',
+            text : "",
             contatto: [
 
                 {
@@ -190,6 +191,10 @@ const configurazione = {
             else{
                 return "onLeft";
             }
+        },
+        print(indice) {
+                indice.push(this.text)
+                this.text = "";
         }
     }
 };
