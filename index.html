@@ -119,19 +119,22 @@
                 <!-- Box messaggi -->
                 <div class="bg-primary containerBox">
                     <div class="messaggi w-100 pb-2 m-auto h-100">
-                        <div class="w-75 m-auto">
+                        <div class="w-75 m-auto position-relative">
 
 
                         <!-- Singolo messaggio -->
-                        <div class="d-flex justify-content-end" v-for="singoloMessaggio, i in ourMsg[0].primoContatto">
-                            <!-- Perché devo specificare in entrambi l'indice? Non sarebbe sempre la stessa cosa??? da chiedere -->
-
-                            <div class="d-inline ourMessage message my-2 p-1">
-                                <!-- Mettere il testo a sinistra -->
-                                <span class="text">{{singoloMessaggio.msg[0].messaggio}}</span>
-                                <p class="hour my-0">12:00</p>
+                        <div class="w-100">
+                            <div class="boxMessaggio justify-content-end" v-for="singoloMessaggio, i in ourMsg[0].primoContatto">
+                                <!-- Perché devo specificare in entrambi l'indice? Non sarebbe sempre la stessa cosa??? da chiedere -->
+    
+                                <div class="d-block ourMessage message my-2 p-1" v-for="mex, i in ourMsg[0].primoContatto[0].msg[0].messaggio">
+                                    <!-- Mettere il testo a sinistra -->
+                                    <span class="text">{{singoloMessaggio.msg[i].messaggio}}</span>
+                                    <p class="hour my-0">12:00</p>
+                                </div>
                             </div>
                         </div>
+
 
 
                         <!-- Singolo messaggio del contatto -->

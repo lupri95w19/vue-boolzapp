@@ -37,8 +37,9 @@ const configurazione = {
                         ]
                     }]
             },
-
             ],
+            
+
             nomeContatto: 'prova',
             contatto: [
 
@@ -57,7 +58,7 @@ const configurazione = {
                             stato: 'sent'
                         },
                         {
-                            data: '10/01/2020 15:30:55',
+                            data: '10/01/2020 15:50:55',
                             messaggio: 'Va bene a dopo?',
                             stato: 'received'
                         }
