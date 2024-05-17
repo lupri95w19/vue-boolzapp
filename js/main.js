@@ -173,9 +173,22 @@ const configurazione = {
             this.contattoAttivo = indice;
             // Quando usato nel ciclo for dei contatti, indice viene sostituito alla i in quel caso, e quindi al click cambia il contatto attivo in i
         },
-        getClass(){
-            if(this.stato == 'sent'){
-                return ourMessage;
+        getClass(indice){
+            if(indice == 'sent'){
+                console.log ("ourMessage")
+                return "ourMessage";
+            }
+            else{
+                console.log ("contactMessage")
+                return "contactMessage";
+            }
+        },
+        getClassLeft(indice){
+            if(indice == 'sent'){
+                return "onRight";
+            }
+            else{
+                return "onLeft";
             }
         }
     }

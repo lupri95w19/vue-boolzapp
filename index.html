@@ -122,25 +122,9 @@
                     <div class="messaggi w-100 pb-2 m-auto h-100">
                         <div class="w-75 m-auto position-relative">
 
-
-                        <!-- Singolo messaggio -->
-                        <div class="w-100">
-                            <div class="boxMessaggio justify-content-end">
-                                <!-- Perché devo specificare in entrambi l'indice? Non sarebbe sempre la stessa cosa??? da chiedere -->
-    
-                                <div class="d-block ourMessage message my-2 p-1">
-                                    <!-- Mettere il testo a sinistra -->
-                                    <span class="text"></span>
-                                    <p class="hour my-0">12:00</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-
                         <!-- Singolo messaggio del contatto -->
-                        <div class="d-flex flex-column boxMessaggio justify-content-end" v-for="singoloMessaggio in contatto[contattoAttivo].msg">
-                            <div class="d-inline contactMessage message my-2 p-1 mw-50" :class="getClass(singoloMessaggio.stato)">
+                        <div class="d-flex flex-column boxMessaggio justify-content-end" v-for="singoloMessaggio in contatto[contattoAttivo].msg" :class="getClassLeft(singoloMessaggio.stato)" >
+                            <div class="d-inline message my-2 p-1 mw-50" :class="getClass(singoloMessaggio.stato)">
                                 <!-- Mettere il testo a sinistra -->
                                 <!-- il numero dentro contatto indica quale contatto appunto -->
                                 <span class="my-0 text">{{singoloMessaggio.messaggio}}</span>

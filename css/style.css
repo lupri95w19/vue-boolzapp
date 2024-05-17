@@ -111,3 +111,6 @@ i {
 .active{
     display: none !important;
 }
+.onRight{
+    margin-left: auto;
+}
