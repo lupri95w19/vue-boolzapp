@@ -70,14 +70,15 @@
                 <!-- Lista Contatti-->
                 <div class="container-contatti overflow-auto border-top border-dark">
                     <!-- Contatto singolo, da fare col for -->
-                    <div v-for="contattoSingolo, i in contatto" class="d-flex w-100 p-2 msgTabHover align-items-center" :class="checkImageVisibility(i)">
+                    <div v-for="contattoSingolo, i in contatto" class="d-flex w-100 p-2 msgTabHover align-items-center">
                         <div class="mx-2">
                             <img  :src="contatto[i].img" alt="" class="avatar rounded-circle">
                         </div>
                         <div class="w-100">
                             <h6 class="my-0 py-0 mb-1">{{contatto[i].nome}}</h6>
                             <!-- Da chiedere come centrare -->
-                            <p class="my-0 py-0 mt-1">{{contatto[i].msg[0]}}</p>
+                            <!-- Contatto i richiede che tutti abbiano msg e messaggio altrimenti va in schermo bianco -->
+                            <p class="my-0 py-0 mt-1">{{contatto[i].msg[0].messaggio}}</p>
                         </div>
                         <div>
                             <p class="text-right">{{contatto[i].msg.data}}</p>
@@ -134,7 +135,7 @@
                             <div class="d-inline contactMessage message my-2 p-1 mw-50" mt-4>
                                 <!-- Mettere il testo a sinistra -->
                                 <span class="my-0 text">{{contatto[0].msg[0].messaggio}}</span>
-                                <p class="hour text-end my-0">{{contatto[0].msg[0].data.slice(10)}}</p>
+                                <p class="hour text-end my-0">{{contatto[0].msg[0].data.slice(10).slice(0, -3)}}</p>
                             </div>
                         </div>
 

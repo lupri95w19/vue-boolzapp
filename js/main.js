@@ -90,15 +90,6 @@ const configurazione = {
             ]
         }
     },
-
-
-    methods: {
-        checkImageVisibility(index) {
-            console.log("ciaooo" + this.contatto[index].ownUser);
-            // Solamente il proprio utente ha .ownUser, quindi solamente quello avrà active, che su css è display-none
-            return (this.contatto[index].ownUser == false) ? 'active' : 'hngnhgnghngh';
-        }
-    }
 };
 
 console.log(this.ourMsg)
