@@ -120,22 +120,27 @@
                 <div class="bg-primary containerBox">
                     <div class="messaggi w-100 pb-2 m-auto h-100">
                         <div class="w-75 m-auto">
+
+
                         <!-- Singolo messaggio -->
-                        <div class="d-flex justify-content-end">
-                            <div class="d-inline ourMessage message my-2 p-1" mt-4>
+                        <div class="d-flex justify-content-end" v-for="singoloMessaggio, i in ourMsg[0].primoContatto">
+                            <!-- Perché devo specificare in entrambi l'indice? Non sarebbe sempre la stessa cosa??? da chiedere -->
+
+                            <div class="d-inline ourMessage message my-2 p-1">
                                 <!-- Mettere il testo a sinistra -->
-                                <span class="text"></span>
+                                <span class="text">{{singoloMessaggio.msg[0].messaggio}}</span>
                                 <p class="hour my-0">12:00</p>
                             </div>
                         </div>
 
 
                         <!-- Singolo messaggio del contatto -->
-                        <div class="d-flex flex-column boxMessaggio justify-content-start" v-for="singoloMessaggio, i in contatto">
-                            <div class="d-inline contactMessage message my-2 p-1 mw-50" v-for="prova, i in contatto[i].msg">
+                        <div class="d-flex flex-column boxMessaggio justify-content-start" v-for="singoloMessaggio in contatto[0].msg">
+                            <div class="d-inline contactMessage message my-2 p-1 mw-50">
                                 <!-- Mettere il testo a sinistra -->
-                                <span class="my-0 text">{{contatto[0].msg[i].messaggio}}</span>
-                                <p class="hour text-end my-0">{{contatto[0].msg[0].data.slice(10).slice(0, -3)}}</p>
+                                <!-- il numero dentro contatto indica quale contatto appunto -->
+                                <span class="my-0 text">{{singoloMessaggio.messaggio}}</span>
+                                <p class="hour text-end my-0">{{singoloMessaggio.data.slice(10).slice(0, -3)}}</p>
                             </div>
                         </div>
                         </div>
@@ -147,7 +152,7 @@
                 </div>
 
                 <!-- Sotto i messaggi -->
-                <div class="undermsg">
+                <div class="undermsg border-top border-dark">
                     <div class="m-2 mt-0 h-100 d-flex justify-content-around align-items-center vertical-align-middle">
                         <a href="#" class="text-secondary"><i
                                 class="fa-regular fa-face-smile mx-3 text-secondary"></i></a>

@@ -15,19 +15,34 @@ const configurazione = {
         return {
             myProfile: 'Luca',
             immagine: './img/Io.png',
-            ourMsg: ['Ehy', 'Come va? tutto bene?', 'Elemento 3'],
+            ourMsg: [{
+                primoContatto: [
+                    {
+                        msg: [
+                            {
+                                data: '10/01/2020 15:30:55',
+                                messaggio: 'Ehy',
+                                stato: 'sent'
+                            },
+                            {
+                                data: '10/01/2020 15:30:55',
+                                messaggio: 'Come va? tutto bene?',
+                                stato: 'sent'
+                            },
+                            {
+                                data: '10/01/2020 15:30:55',
+                                messaggio: 'Elemento 3',
+                                stato: 'sent'
+                            },
+                        ]
+                    }]
+            },
+
+            ],
             nomeContatto: 'prova',
             contatto: [
-                {
-                    // nome: 'Luca',
-                    // img: './img/Io.png',
-                    // ourMsgs: [
-                    //     {
-                    //         // prova: ['Ehy', 'Come va? tutto bene?', 'Elemento 3']
-                    //         ciao : "prova",
-                    //     }
-                    // ]
 
+                {
                     nome: 'Alberto',
                     msg: [
                         {
@@ -52,6 +67,7 @@ const configurazione = {
                     value: "user",
                     ownUser: false
                 },
+
                 {
                     nome: 'Gigi',
                     msg: [
