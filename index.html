@@ -70,7 +70,8 @@
                 <!-- Lista Contatti-->
                 <div class="container-contatti overflow-auto border-top border-dark">
                     <!-- Contatto singolo, da fare col for -->
-                    <div v-for="contattoSingolo, i in contatto" class="d-flex w-100 p-2 msgTabHover align-items-center">
+                    <div v-for="contattoSingolo, i in contatto" class="d-flex w-100 p-2 msgTabHover align-items-center" @click="cambiaChat(i)">
+                        <!-- Quel cambiachat fa riferimento all'indice creato precedentemente -->
                         <div class="mx-2">
                             <img  :src="contatto[i].img" alt="" class="avatar rounded-circle">
                         </div>
@@ -124,12 +125,12 @@
 
                         <!-- Singolo messaggio -->
                         <div class="w-100">
-                            <div class="boxMessaggio justify-content-end" v-for="singoloMessaggio, i in ourMsg[0].primoContatto">
+                            <div class="boxMessaggio justify-content-end">
                                 <!-- Perché devo specificare in entrambi l'indice? Non sarebbe sempre la stessa cosa??? da chiedere -->
     
-                                <div class="d-block ourMessage message my-2 p-1" v-for="mex, i in ourMsg[0].primoContatto[0].msg[0].messaggio">
+                                <div class="d-block ourMessage message my-2 p-1">
                                     <!-- Mettere il testo a sinistra -->
-                                    <span class="text">{{singoloMessaggio.msg[i].messaggio}}</span>
+                                    <span class="text"></span>
                                     <p class="hour my-0">12:00</p>
                                 </div>
                             </div>
@@ -138,8 +139,8 @@
 
 
                         <!-- Singolo messaggio del contatto -->
-                        <div class="d-flex flex-column boxMessaggio justify-content-start" v-for="singoloMessaggio in contatto[0].msg">
-                            <div class="d-inline contactMessage message my-2 p-1 mw-50">
+                        <div class="d-flex flex-column boxMessaggio justify-content-end" v-for="singoloMessaggio in contatto[contattoAttivo].msg">
+                            <div class="d-inline contactMessage message my-2 p-1 mw-50" :class="getClass(singoloMessaggio.stato)">
                                 <!-- Mettere il testo a sinistra -->
                                 <!-- il numero dentro contatto indica quale contatto appunto -->
                                 <span class="my-0 text">{{singoloMessaggio.messaggio}}</span>

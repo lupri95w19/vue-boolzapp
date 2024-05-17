@@ -13,33 +13,9 @@ const configurazione = {
     data() {
         //La funzione restituisce un oggetto con tutti i dati
         return {
+            contattoAttivo : 0, 
             myProfile: 'Luca',
             immagine: './img/Io.png',
-            ourMsg: [{
-                primoContatto: [
-                    {
-                        msg: [
-                            {
-                                data: '10/01/2020 15:30:55',
-                                messaggio: 'Ehy',
-                                stato: 'sent'
-                            },
-                            {
-                                data: '10/01/2020 15:30:55',
-                                messaggio: 'Come va? tutto bene?',
-                                stato: 'sent'
-                            },
-                            {
-                                data: '10/01/2020 15:30:55',
-                                messaggio: 'Elemento 3',
-                                stato: 'sent'
-                            },
-                        ]
-                    }]
-            },
-            ],
-            
-
             nomeContatto: 'prova',
             contatto: [
 
@@ -59,7 +35,7 @@ const configurazione = {
                         },
                         {
                             data: '10/01/2020 15:50:55',
-                            messaggio: 'Va bene a dopo?',
+                            messaggio: 'Va bene a dopo',
                             stato: 'received'
                         }
                     ],
@@ -192,6 +168,17 @@ const configurazione = {
             ]
         }
     },
+    methods: {
+        cambiaChat(indice){
+            this.contattoAttivo = indice;
+            // Quando usato nel ciclo for dei contatti, indice viene sostituito alla i in quel caso, e quindi al click cambia il contatto attivo in i
+        },
+        getClass(){
+            if(this.stato == 'sent'){
+                return ourMessage;
+            }
+        }
+    }
 };
 
 console.log(this.ourMsg)
