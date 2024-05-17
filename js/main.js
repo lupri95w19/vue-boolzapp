@@ -31,21 +31,21 @@ const configurazione = {
                     nome: 'Alberto',
                     msg: [
                         {
-                            data : '10/01/2020 15:30:55',
+                            data: '10/01/2020 15:30:55',
                             messaggio: 'Hai portato a spasso il cane?',
                             stato: 'sent'
-            
+
                         },
                         {
-                            data : '10/01/2020 15:40:55',
+                            data: '10/01/2020 15:40:55',
                             messaggio: 'Rispondimi?',
                             stato: 'sent'
                         },
                         {
-                            data : '10/01/2020 15:30:55',
+                            data: '10/01/2020 15:30:55',
                             messaggio: 'Va bene a dopo?',
                             stato: 'received'
-                        }                        
+                        }
                     ],
                     img: './img/avatar_1.jpg',
                     ultimoAccesso: 'oggi alle 12:00',
@@ -54,35 +54,120 @@ const configurazione = {
                 },
                 {
                     nome: 'Gigi',
-                    msg: ['Ehila'],
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
                     img: './img/avatar_1.jpg',
                     ultimoAccesso: 'oggi alle 12:00',
 
                 },
                 {
                     nome: 'Fabio',
-                    msg: ['Sto arrivando'],
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Hai portato a spasso il cane?',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Rispondimi?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo?',
+                            stato: 'received'
+                        }
+                    ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
 
                 },
                 {
                     nome: 'Manuel',
-                    msg: ['No oggi non ho voglia'],
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
                     img: './img/avatar_3.jpg',
                     ultimoAccesso: 'ultimo accesso martedì alle 13:00',
 
                 },
                 {
                     nome: 'Alessandro B.',
-                    msg: ['Molto interessante'],
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Hai portato a spasso il cane?',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Rispondimi?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo?',
+                            stato: 'received'
+                        }
+                    ],
                     img: './img/avatar_4.jpg',
                     ultimoAccesso: 'online',
 
                 },
                 {
                     nome: 'Fabio',
-                    msg: ['Sto arrivando'],
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
 
