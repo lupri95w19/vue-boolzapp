@@ -118,8 +118,8 @@
 
                 <!-- Box messaggi -->
                 <div class="bg-primary containerBox">
-                    <div class="messaggi w-75 m-auto">
-
+                    <div class="messaggi w-100 pb-2 m-auto h-100">
+                        <div class="w-75 m-auto">
                         <!-- Singolo messaggio -->
                         <div class="d-flex justify-content-end">
                             <div class="d-inline ourMessage message my-2 p-1" mt-4>
@@ -131,13 +131,16 @@
 
 
                         <!-- Singolo messaggio del contatto -->
-                        <div class="d-flex justify-content-start">
-                            <div class="d-inline contactMessage message my-2 p-1 mw-50" mt-4>
+                        <div class="d-flex flex-column boxMessaggio justify-content-start" v-for="singoloMessaggio, i in contatto">
+                            <div class="d-inline contactMessage message my-2 p-1 mw-50" v-for="prova, i in contatto[i].msg">
                                 <!-- Mettere il testo a sinistra -->
-                                <span class="my-0 text">{{contatto[0].msg[0].messaggio}}</span>
+                                <span class="my-0 text">{{contatto[0].msg[i].messaggio}}</span>
                                 <p class="hour text-end my-0">{{contatto[0].msg[0].data.slice(10).slice(0, -3)}}</p>
                             </div>
                         </div>
+                        </div>
+
+
 
 
                     </div>
