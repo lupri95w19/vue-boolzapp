@@ -70,18 +70,17 @@
                 <!-- Lista Contatti-->
                 <div class="container-contatti overflow-auto border-top border-dark">
                     <!-- Contatto singolo, da fare col for -->
-                    <div class="d-flex w-100 p-2 msgTabHover align-items-center">
+                    <div v-for="contattoSingolo, i in contatto" class="d-flex w-100 p-2 msgTabHover align-items-center" :class="checkImageVisibility(i)">
                         <div class="mx-2">
-                            <img :src="contatto[0].img" alt="" class="avatar rounded-circle">
-                            <img src="" alt="">
+                            <img  :src="contatto[i].img" alt="" class="avatar rounded-circle">
                         </div>
                         <div class="w-100">
-                            <h6 class="my-0 py-0 mb-1">{{contatto[0].nome}}</h6> 
+                            <h6 class="my-0 py-0 mb-1">{{contatto[i].nome}}</h6>
                             <!-- Da chiedere come centrare -->
-                            <p class="my-0 py-0 mt-1">{{contatto[0].msg[0]}}</p>
+                            <p class="my-0 py-0 mt-1">{{contatto[i].msg[0]}}</p>
                         </div>
                         <div>
-                            <p class="text-right">12:00</p>
+                            <p class="text-right">{{contatto[i].msg.data}}</p>
                         </div>
 
                     </div>
@@ -117,33 +116,25 @@
                 </div>
 
                 <!-- Box messaggi -->
-                <div class="bg-primary prova">
+                <div class="bg-primary containerBox">
                     <div class="messaggi w-75 m-auto">
 
                         <!-- Singolo messaggio -->
                         <div class="d-flex justify-content-end">
                             <div class="d-inline ourMessage message my-2 p-1" mt-4>
                                 <!-- Mettere il testo a sinistra -->
-                                <span class="text">{{ourMsg[0]}}</span>
+                                <span class="text"></span>
                                 <p class="hour my-0">12:00</p>
                             </div>
                         </div>
 
-                        <!-- Singolo messaggio -->
-                        <div class="d-flex justify-content-end">
-                            <div class="d-inline ourMessage message my-2 p-1" mt-4>
-                                <!-- Mettere il testo a sinistra -->
-                                <span class="my-0 text">{{ourMsg[1]}}</span>
-                                <p class="hour my-0">12:00</p>
-                            </div>
-                        </div>
 
                         <!-- Singolo messaggio del contatto -->
                         <div class="d-flex justify-content-start">
                             <div class="d-inline contactMessage message my-2 p-1 mw-50" mt-4>
                                 <!-- Mettere il testo a sinistra -->
-                                <span class="my-0 text">{{contatto[0].msg[0]}}</span>
-                                <p class="hour text-end my-0">12:00</p>
+                                <span class="my-0 text">{{contatto[0].msg[0].messaggio}}</span>
+                                <p class="hour text-end my-0">{{contatto[0].msg[0].data.slice(10)}}</p>
                             </div>
                         </div>
 
