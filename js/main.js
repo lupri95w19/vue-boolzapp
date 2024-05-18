@@ -13,11 +13,11 @@ const configurazione = {
     data() {
         //La funzione restituisce un oggetto con tutti i dati
         return {
-            contattoAttivo : 0, 
+            contattoAttivo: 0,
             myProfile: 'Luca',
             immagine: './img/Io.png',
             nomeContatto: 'prova',
-            text : "",
+            text: "",
             contatto: [
 
                 {
@@ -170,32 +170,38 @@ const configurazione = {
         }
     },
     methods: {
-        cambiaChat(indice){
+        cambiaChat(indice) {
             this.contattoAttivo = indice;
             // Quando usato nel ciclo for dei contatti, indice viene sostituito alla i in quel caso, e quindi al click cambia il contatto attivo in i
         },
-        getClass(indice){
-            if(indice == 'sent'){
-                console.log ("ourMessage")
+        getClass(indice) {
+            if (indice == 'sent') {
+                console.log("ourMessage")
                 return "ourMessage";
             }
-            else{
-                console.log ("contactMessage")
+            else {
+                console.log("contactMessage")
                 return "contactMessage";
             }
         },
-        getClassLeft(indice){
-            if(indice == 'sent'){
+        getClassLeft(indice) {
+            if (indice == 'sent') {
                 return "onRight";
             }
-            else{
+            else {
                 return "onLeft";
             }
         },
         print(indice) {
-                indice.push(this.text)
-                this.text = "";
-        }
+            console.log(indice)
+            b = {
+                data: '10/01/2020 15:30:55',
+                messaggio: this.addText, //quel this mi ha fatto perdere 20 minuti di tempo, però in console spunta un errore... IT JUST WORKS
+                stato: 'sent'
+            }
+            indice.push(b)
+            this.addText = "";
+        },
     }
 };
 

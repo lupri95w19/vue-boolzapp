@@ -129,6 +129,7 @@
                                 <!-- il numero dentro contatto indica quale contatto appunto -->
                                 <span class="my-0 text">{{singoloMessaggio.messaggio}}</span>
                                 <p class="hour text-end my-0">{{singoloMessaggio.data.slice(10).slice(0, -3)}}</p>
+                                <!-- Se tolgo gli slice, riesco ad aggiungere qualcosa con l'input -->
                             </div>
                         </div>
                         </div>
@@ -144,10 +145,11 @@
                     <div class="m-2 mt-0 h-100 d-flex justify-content-around align-items-center vertical-align-middle">
                         <a href="#" class="text-secondary"><i
                                 class="fa-regular fa-face-smile mx-3 text-secondary"></i></a>
-                        <input type="text" class="form-control text-secondary mx-3 text-secondary"
+                                <!-- Così eseguo all'invio @keyup.enter="print(contatto[contattoAttivo].msg)" -->
+                        <input v-model="addText" @keyup.enter="print(contatto[contattoAttivo].msg)" type="text" class="form-control text-secondary mx-3 text-secondary"
                             placeholder="Cerca o inizia una nuova chat" aria-label="Username"
-                            aria-describedby="basic-addon1" v-model="text">
-                            <button @click="print(contatto[0].msg.messaggio)">Invia</button>
+                            aria-describedby="basic-addon1">
+                            <button @click="print(contatto[contattoAttivo].msg)">Invia</button>
                         <a href="#" class="text-secondary"><i
                                 class="fa-solid fa-microphone mx-3 text-secondary"></i></a>
 
