@@ -16,6 +16,7 @@
 
     <!-- Vue -->
     <script src="https://unpkg.com/vue@3.4.27/dist/vue.global.js"></script>
+    
 </head>
 
 <body>
@@ -149,7 +150,7 @@
                         <input v-model="addText" @keyup.enter="print(contatto[contattoAttivo].msg)" type="text" class="form-control text-secondary mx-3 text-secondary"
                             placeholder="Cerca o inizia una nuova chat" aria-label="Username"
                             aria-describedby="basic-addon1">
-                            <button @click="print(contatto[contattoAttivo].msg)">Invia</button>
+                            <button @click="print(contatto[contattoAttivo].msg)" class="border-0 text-secondary"><i class="fa-solid fa-paper-plane"></i></button>
                         <a href="#" class="text-secondary"><i
                                 class="fa-solid fa-microphone mx-3 text-secondary"></i></a>
 

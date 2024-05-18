@@ -114,3 +114,11 @@ i {
 .onRight{
     margin-left: auto;
 }
+
+i:hover{
+    color: rgb(41, 41, 41);
+}
+/* Da chiedere, perché all'avvio rompe tutto per 200ms? */
+i:not(:hover){
+    transition: 0.3s ease-in-out;
+}

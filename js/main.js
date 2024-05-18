@@ -196,19 +196,25 @@ const configurazione = {
 
         print(indice) {
             console.log(indice)
+            const currDate = Date.now();
+            const dt = new Date(currDate);
+            console.log(dt.getHours() + ":" + dt.getMinutes());
+            const dataMessaggio = dt.getHours() + ":" + dt.getMinutes();
+
             b = {
-                data: '10/01/2020 15:30:55',
-                messaggio: this.addText, //quel this mi ha fatto perdere 20 minuti di tempo, però in console spunta un errore... IT JUST WORKS
+                data: dataMessaggio, //da chiedere, perché non mi aggiunge l'ora? col this da errori per lo slice
+                messaggio: this.addText, // Da chiedere quel this mi ha fatto perdere 20 minuti di tempo, però in console spunta un errore... IT JUST WORKS
                 stato: 'sent'
             }
             indice.push(b);
             this.addText = "";
+
             //Non ho ben capito come impostare il timeout nelle funzioni con vue
             setTimeout(() =>
                 console.log(indice),
                 c = {
-                    data: '10/01/2020 15:30:55',
-                    messaggio: "Ok", //quel this mi ha fatto perdere 20 minuti di tempo, però in console spunta un errore... IT JUST WORKS
+                    data: dataMessaggio, //da chiedere, perché non mi aggiunge l'ora? col this da errori per lo slice
+                    messaggio: "Ok", // Da chiedere quel this mi ha fatto perdere 20 minuti di tempo, però in console spunta un errore... IT JUST WORKS
                     stato: 'Received'
                 },
                 indice.push(c));
