@@ -39,7 +39,7 @@ i {
 
 /* Schermata della chat */
 .containerBox {
-    height: 80%;
+    height: 83%;
 }
 
 .container-contatti,
@@ -48,7 +48,13 @@ i {
     overflow: auto;
 }
 .orarioContatti{
-    font-size: 0.6rem;
+    font-size: 0.8rem;
+}
+.navAlt{
+    height: 6%;
+}
+.contactList{
+    height: 74%;
 }
 
 /* Avatar dei contatti */
@@ -108,7 +114,7 @@ i {
 
 /* Barra sotto la chat */
 .undermsg {
-    height: 10%;
+    height: 7%;
 }
 
 .active{

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Da chiedere perché all'avvio ho quel caricamento delle icone orribile -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/ee64cb3605.js" crossorigin="anonymous"></script>
+    
 
     <!-- Vue -->
     <script src="https://unpkg.com/vue@3.4.27/dist/vue.global.js"></script>
@@ -44,7 +45,7 @@
 
                 </div>
                 <!-- Ricevi notifiche -->
-                <div class="w-100 py-2 bg-info align-items-center d-flex">
+                <div class="w-100 user py-2 bg-info align-items-center d-flex">
                     <a href="#">
                         <i
                             class="fa-regular fa-bell-slash text-info border bg-light rounded-circle p-3 mx-2 fs-3"></i></a>
@@ -55,13 +56,13 @@
                 </div>
 
                 <!-- Navbar -->
-                <nav class="navbar navbar-light bg-light w-100">
+                <nav class="navbar navbar-light bg-light w-100 navAlt">
                     <form class="form-inline w-100 mx-2">
                         <div class="input-group">
                             <div class="input-group-prepend align-self-center me-2">
                                 <a href="#"><i class="fa-solid fa-magnifying-glass m-auto fs-5 text-secondary"></i></a>
                             </div>
-                            <input type="text" class="form-control text-secondary"
+                            <input v-model="search" type="text" class="form-control text-secondary"
                                 placeholder="Cerca o inizia una nuova chat" aria-label="Username"
                                 aria-describedby="basic-addon1">
                         </div>
@@ -69,7 +70,7 @@
                 </nav>
 
                 <!-- Lista Contatti-->
-                <div class="container-contatti overflow-auto border-top border-dark">
+                <div class="container-contatti overflow-auto border-top border-dark contactList">
                     <!-- Contatto singolo, da fare col for -->
                     <div v-for="contattoSingolo, i in contatto" class="d-flex w-100 p-2 msgTabHover align-items-center" @click="cambiaChat(i)">
                         <!-- Quel cambiachat fa riferimento all'indice creato precedentemente -->
@@ -153,7 +154,7 @@
                         <input v-model="addText" @keyup.enter="print(contatto[contattoAttivo].msg)" type="text" class="form-control text-secondary mx-3 text-secondary"
                             placeholder="Scrivi un messaggio" aria-label="Username"
                             aria-describedby="basic-addon1">
-                            <button @click="print(contatto[contattoAttivo].msg)" class="border-0 text-secondary"><i class="fa-solid fa-paper-plane"></i></button>
+                            <button @click="print(contatto[contattoAttivo].msg)" class="border-0 text-secondary bg-transparent"><i class="fa-solid fa-paper-plane"></i></button>
                         <a href="#" class="text-secondary"><i
                                 class="fa-solid fa-microphone mx-3 text-secondary"></i></a>
 

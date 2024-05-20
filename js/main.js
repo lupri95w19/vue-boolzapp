@@ -167,6 +167,294 @@ const configurazione = {
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
 
                 },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+
+                },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+
+                },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+
+                },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+
+                },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+
+                },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+
+                },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+
+                },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+
+                },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+
+                },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+
+                },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+
+                },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+
+                },
             ]
         }
     },
@@ -234,6 +522,12 @@ const configurazione = {
         },
         remove(indice) {
             indice.pop();
+        },
+        
+        filterList(){
+            const searchInputv = search;
+            const filter = searchInputv.value.toLowerCase();
+            const listItems = this.contatto
         }
 
     },
