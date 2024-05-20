@@ -18,6 +18,7 @@ const configurazione = {
             immagine: './img/Io.png',
             nomeContatto: 'prova',
             text: "",
+            addText: "",
             contatto: [
 
                 {
@@ -169,7 +170,8 @@ const configurazione = {
             ]
         }
     },
-    methods: {
+    methods:
+    {
         cambiaChat(indice) {
             this.contattoAttivo = indice;
             // Quando usato nel ciclo for dei contatti, indice viene sostituito alla i in quel caso, e quindi al click cambia il contatto attivo in i
@@ -195,35 +197,54 @@ const configurazione = {
 
 
         print(indice) {
-            console.log(indice)
-            const currDate = Date.now();
-            const dt = new Date(currDate);
-            console.log(dt.getHours() + ":" + dt.getMinutes());
-            const dataMessaggio = dt.getHours() + ":" + dt.getMinutes();
+            if (this.addText.length > 0) {
+                console.log(indice)
 
-            b = {
-                data: dataMessaggio, //da chiedere, perché non mi aggiunge l'ora? col this da errori per lo slice
-                messaggio: this.addText, // Da chiedere quel this mi ha fatto perdere 20 minuti di tempo, però in console spunta un errore... IT JUST WORKS
-                stato: 'sent'
+                const now = new Date();
+                const hours = now.getHours();
+                const minutes = now.getMinutes();
+                const formattedTime = `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+                const dataProva = Date().slice(5).slice(0, -43)
+
+                // const currDate = Date.now();
+                // const dt = new Date(currDate);
+                // console.log(dt.getHours() + ":" + dt.getMinutes());
+                // const dataMessaggio = dt.getHours() + ":" + dt.getMinutes();
+                b = {
+                    data: dataProva, //da chiedere, perché non mi aggiunge l'ora? col this da errori per lo slice
+                    messaggio: this.addText, // Da chiedere quel this mi ha fatto perdere 20 minuti di tempo, però in console spunta un errore... IT JUST WORKS
+                    stato: 'sent'
+                }
+                indice.push(b);
+                this.addText = "";
+                clearTimeout()
+                setTimeout(() => {
+                    console.log(indice),
+                        c = {
+                            data: dataProva, //da chiedere, perché non mi aggiunge l'ora? col this da errori per lo slice
+                            messaggio: "Ok", // Da chiedere quel this mi ha fatto perdere 20 minuti di tempo, però in console spunta un errore... IT JUST WORKS
+                            stato: 'Received'
+                        },
+                        indice.push(c);
+                }, 1000);
+                //Non ho ben capito come impostare il timeout nelle funzioni con vue
+
             }
-            indice.push(b);
-            this.addText = "";
 
-            //Non ho ben capito come impostare il timeout nelle funzioni con vue
-            setTimeout(() =>
-                console.log(indice),
-                c = {
-                    data: dataMessaggio, //da chiedere, perché non mi aggiunge l'ora? col this da errori per lo slice
-                    messaggio: "Ok", // Da chiedere quel this mi ha fatto perdere 20 minuti di tempo, però in console spunta un errore... IT JUST WORKS
-                    stato: 'Received'
-                },
-                indice.push(c));
         },
+        remove(indice) {
+            indice.pop();
+        }
 
+    },
+    computed: {
+        lastIndex() {
+            console.log("ciao", this.contatto[0].msg)
+            //   return this.contatto[this.contattoAttivo].msg.length -1
+            //   Così prendo l'ultimo elemento dell'oggetto
+        }
     }
 };
-
-console.log(this.ourMsg)
 
 
 

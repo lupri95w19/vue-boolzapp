@@ -47,6 +47,9 @@ i {
     height: 50vh;
     overflow: auto;
 }
+.orarioContatti{
+    font-size: 0.6rem;
+}
 
 /* Avatar dei contatti */
 .avatar {
