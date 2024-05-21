@@ -19,6 +19,7 @@ const configurazione = {
             nomeContatto: 'prova',
             text: "",
             addText: "",
+            search : "",
             contatto: [
 
                 {
@@ -44,7 +45,8 @@ const configurazione = {
                     img: './img/avatar_1.jpg',
                     ultimoAccesso: 'oggi alle 12:00',
                     value: "user",
-                    ownUser: false
+                    ownUser: false,
+                    visible: true,
                 },
 
                 {
@@ -69,6 +71,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_1.jpg',
                     ultimoAccesso: 'oggi alle 12:00',
+                    visible: true,
 
                 },
                 {
@@ -93,6 +96,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -117,6 +121,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_3.jpg',
                     ultimoAccesso: 'ultimo accesso martedì alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -141,6 +146,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_4.jpg',
                     ultimoAccesso: 'online',
+                    visible: true,
 
                 },
                 {
@@ -165,6 +171,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -189,6 +196,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -213,6 +221,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -237,6 +246,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -261,6 +271,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -285,6 +296,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -309,6 +321,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -333,6 +346,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -357,6 +371,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -381,6 +396,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -405,6 +421,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -429,6 +446,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
                 {
@@ -453,6 +471,7 @@ const configurazione = {
                     ],
                     img: './img/avatar_2.jpg',
                     ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
 
                 },
             ]
@@ -521,13 +540,24 @@ const configurazione = {
 
         },
         remove(indice) {
-            indice.pop();
+            indice.pop(0);
         },
-        
-        filterList(){
+
+        filterList() {
             const searchInputv = search;
             const filter = searchInputv.value.toLowerCase();
             const listItems = this.contatto
+        },
+
+        find() {
+            for (let i = 0; i < this.contatto.length; i++) {
+                let contatto = this.contatto[i];
+                if (contatto.nome.startsWith(this.search) || contatto.nome.toLowerCase().startsWith(this.search) || contatto.nome.toUpperCase().startsWith(this.search)) {
+                    contatto.visible = true;
+                } else {
+                    contatto.visible = false;
+                }
+            }
         }
 
     },

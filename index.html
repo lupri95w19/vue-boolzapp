@@ -60,9 +60,9 @@
                     <form class="form-inline w-100 mx-2">
                         <div class="input-group">
                             <div class="input-group-prepend align-self-center me-2">
-                                <a href="#"><i class="fa-solid fa-magnifying-glass m-auto fs-5 text-secondary"></i></a>
+                                <button class="btn bg-transparent border-transparent" @click="find"><i class="fa-solid fa-magnifying-glass m-auto fs-5 text-secondary border-transparent"></i></button>
                             </div>
-                            <input v-model="search" type="text" class="form-control text-secondary"
+                            <input v-model="search" @click="find" type="text" class="form-control text-secondary"
                                 placeholder="Cerca o inizia una nuova chat" aria-label="Username"
                                 aria-describedby="basic-addon1">
                         </div>
@@ -74,21 +74,24 @@
                     <!-- Contatto singolo, da fare col for -->
                     <div v-for="contattoSingolo, i in contatto" class="d-flex w-100 p-2 msgTabHover align-items-center" @click="cambiaChat(i)">
                         <!-- Quel cambiachat fa riferimento all'indice creato precedentemente -->
-                        <div class="mx-2">
-                            <img  :src="contatto[i].img" alt="" class="avatar rounded-circle">
+                        <div v-if="contattoSingolo.visible" class="d-flex w-100">
+                            <div class="mx-2">
+                                <img  :src="contatto[i].img" alt="" class="avatar rounded-circle">
+                            </div>
+                            <div class="w-100">
+                                <h6 class="my-0 py-0 mb-1">{{contatto[i].nome}}</h6>
+                                <!-- Da chiedere come centrare -->
+                                <!-- Contatto i richiede che tutti abbiano msg e messaggio altrimenti va in schermo bianco -->
+                                <p class="my-0 py-0 mt-1">{{contattoSingolo.msg[contattoSingolo.msg.length -1].messaggio}}</p>
+                                <!-- <p class="my-0 py-0 mt-1">{{contatto[i].msg[lastIndex].messaggio}}</p> -->
+                                <!-- Quel last index fa riferimento al computed, che prende l'ultimo elemento dell'oggetto -->
+                            </div>
+                            <div>
+                                <p class="text-right orarioContatti my-0">{{contattoSingolo.msg[contattoSingolo.msg.length -1].data.slice(10).slice(0, -3)}}</p>
+                                <!-- Da chiedere perché non entra la data -->
+                            </div>
                         </div>
-                        <div class="w-100">
-                            <h6 class="my-0 py-0 mb-1">{{contatto[i].nome}}</h6>
-                            <!-- Da chiedere come centrare -->
-                            <!-- Contatto i richiede che tutti abbiano msg e messaggio altrimenti va in schermo bianco -->
-                            <p class="my-0 py-0 mt-1">{{contattoSingolo.msg[contattoSingolo.msg.length -1].messaggio}}</p>
-                            <!-- <p class="my-0 py-0 mt-1">{{contatto[i].msg[lastIndex].messaggio}}</p> -->
-                            <!-- Quel last index fa riferimento al computed, che prende l'ultimo elemento dell'oggetto -->
-                        </div>
-                        <div>
-                            <p class="text-right orarioContatti my-0">{{contattoSingolo.msg[contattoSingolo.msg.length -1].data.slice(10).slice(0, -3)}}</p>
-                            <!-- Da chiedere perché non entra la data -->
-                        </div>
+
 
                     </div>
 
@@ -105,7 +108,7 @@
                 <div class="user w-100 py-2 d-flex justify-content-between">
                     <div class="d-flex mx-2 my-auto text-muted align-items-center">
                         <div class="d-flex my-auto">
-                            <img :src="contatto[0].img" alt="" class="avatar rounded-circle">
+                            <img :src="contatto[2].img" alt="" class="avatar rounded-circle">
                             <img src="" alt="">
                         </div>
                         <div class="align-items-center">
