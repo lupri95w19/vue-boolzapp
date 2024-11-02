@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Da chiedere perché all'avvio ho quel caricamento delle icone orribile -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +14,11 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/ee64cb3605.js" crossorigin="anonymous"></script>
-    
+
 
     <!-- Vue -->
     <script src="https://unpkg.com/vue@3.4.27/dist/vue.global.js"></script>
-    
+
 </head>
 
 <body>
@@ -60,7 +61,8 @@
                     <form class="form-inline w-100 mx-2">
                         <div class="input-group">
                             <div class="input-group-prepend align-self-center me-2">
-                                <button class="btn bg-transparent border-transparent" @click="find"><i class="fa-solid fa-magnifying-glass m-auto fs-5 text-secondary border-transparent"></i></button>
+                                <button class="btn bg-transparent border-transparent" @click="find"><i
+                                        class="fa-solid fa-magnifying-glass m-auto fs-5 text-secondary border-transparent"></i></button>
                             </div>
                             <input v-model="search" @click="find" type="text" class="form-control text-secondary"
                                 placeholder="Cerca o inizia una nuova chat" aria-label="Username"
@@ -72,31 +74,28 @@
                 <!-- Lista Contatti-->
                 <div class="container-contatti overflow-auto border-top border-dark contactList">
                     <!-- Contatto singolo, da fare col for -->
-                    <div v-for="contattoSingolo, i in contatto" class="d-flex w-100 p-2 msgTabHover align-items-center" @click="cambiaChat(i)">
-                        <!-- Quel cambiachat fa riferimento all'indice creato precedentemente -->
-                        <div v-if="contattoSingolo.visible" class="d-flex w-100">
-                            <div class="mx-2">
-                                <img  :src="contatto[i].img" alt="" class="avatar rounded-circle">
-                            </div>
-                            <div class="w-100">
-                                <h6 class="my-0 py-0 mb-1">{{contatto[i].nome}}</h6>
-                                <!-- Da chiedere come centrare -->
-                                <!-- Contatto i richiede che tutti abbiano msg e messaggio altrimenti va in schermo bianco -->
-                                <p class="my-0 py-0 mt-1">{{contattoSingolo.msg[contattoSingolo.msg.length -1].messaggio}}</p>
-                                <!-- <p class="my-0 py-0 mt-1">{{contatto[i].msg[lastIndex].messaggio}}</p> -->
-                                <!-- Quel last index fa riferimento al computed, che prende l'ultimo elemento dell'oggetto -->
-                            </div>
-                            <div>
-                                <p class="text-right orarioContatti my-0">{{contattoSingolo.msg[contattoSingolo.msg.length -1].data.slice(10).slice(0, -3)}}</p>
-                                <!-- Da chiedere perché non entra la data -->
+                    <div v-for="(contattoSingolo, i) in contatto" :key="i">
+                        <div v-if="contattoSingolo.visible" class="d-flex w-100 p-2 msgTabHover align-items-center"
+                            @click="cambiaChat(i)">
+                            <div class="d-flex w-100">
+                                <div class="mx-2">
+                                    <img :src="contattoSingolo.img" alt="" class="avatar rounded-circle">
+                                </div>
+                                <div class="w-100">
+                                    <h6 class="my-0 py-0 mb-1">{{contattoSingolo.nome}}</h6>
+                                    <p class="my-0 py-0 mt-1">
+                                        {{contattoSingolo.msg[contattoSingolo.msg.length - 1].messaggio}}</p>
+                                </div>
+                                <div>
+                                    <p class="text-right orarioContatti my-0">
+                                        {{contattoSingolo.msg[contattoSingolo.msg.length - 1].data.slice(10).slice(0, -3)}}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-
-
                     </div>
-
-
                 </div>
+
             </div>
 
 
@@ -108,12 +107,12 @@
                 <div class="user w-100 py-2 d-flex justify-content-between">
                     <div class="d-flex mx-2 my-auto text-muted align-items-center">
                         <div class="d-flex my-auto">
-                            <img :src="contatto[2].img" alt="" class="avatar rounded-circle">
+                            <img :src="contatto[contattoAttivo].img" alt="" class="avatar rounded-circle">
                             <img src="" alt="">
                         </div>
                         <div class="align-items-center">
-                            <h6 class="mb-1">{{contatto[0].nome}}</h6>
-                            <p class="m-0">{{contatto[0].ultimoAccesso}}</p>
+                            <h6 class="mb-1">{{contatto[contattoAttivo].nome}}</h6>
+                            <p class="m-0">{{contatto[contattoAttivo].ultimoAccesso}}</p>
                         </div>
 
                     </div>
@@ -130,16 +129,19 @@
                     <div class="messaggi w-100 pb-2 m-auto h-100">
                         <div class="w-75 m-auto position-relative">
 
-                        <!-- Singolo messaggio del contatto -->
-                        <div class="d-flex flex-column boxMessaggio justify-content-end" v-for="singoloMessaggio, i in contatto[contattoAttivo].msg" :class="getClassLeft(singoloMessaggio.stato)" @click="remove(contatto[contattoAttivo].msg)">
-                            <div class="d-inline message my-2 p-1 mw-50" :class="getClass(singoloMessaggio.stato)">
-                                <!-- Mettere il testo a sinistra -->
-                                <!-- il numero dentro contatto indica quale contatto appunto -->
-                                <span class="my-0 text">{{singoloMessaggio.messaggio}}</span>
-                                <p class="hour text-end my-0">{{singoloMessaggio.data.slice(10).slice(0, -3)}}</p>
-                                <!-- Se tolgo gli slice, riesco ad aggiungere qualcosa con l'input -->
+                            <!-- Singolo messaggio del contatto -->
+                            <div class="d-flex flex-column boxMessaggio justify-content-end"
+                                v-for="singoloMessaggio, i in contatto[contattoAttivo].msg"
+                                :class="getClassLeft(singoloMessaggio.stato)"
+                                @click="remove(contatto[contattoAttivo].msg)">
+                                <div class="d-inline message my-2 p-1 mw-50" :class="getClass(singoloMessaggio.stato)">
+                                    <!-- Mettere il testo a sinistra -->
+                                    <!-- il numero dentro contatto indica quale contatto appunto -->
+                                    <span class="my-0 text">{{singoloMessaggio.messaggio}}</span>
+                                    <p class="hour text-end my-0">{{singoloMessaggio.data.slice(10).slice(0, -3)}}</p>
+                                    <!-- Se tolgo gli slice, riesco ad aggiungere qualcosa con l'input -->
+                                </div>
                             </div>
-                        </div>
                         </div>
 
 
@@ -153,11 +155,13 @@
                     <div class="m-2 mt-0 h-100 d-flex justify-content-around align-items-center vertical-align-middle">
                         <a href="#" class="text-secondary"><i
                                 class="fa-regular fa-face-smile mx-3 text-secondary"></i></a>
-                                <!-- Così eseguo all'invio @keyup.enter="print(contatto[contattoAttivo].msg)" -->
-                        <input v-model="addText" @keyup.enter="print(contatto[contattoAttivo].msg)" type="text" class="form-control text-secondary mx-3 text-secondary"
-                            placeholder="Scrivi un messaggio" aria-label="Username"
-                            aria-describedby="basic-addon1">
-                            <button @click="print(contatto[contattoAttivo].msg)" class="border-0 text-secondary bg-transparent"><i class="fa-solid fa-paper-plane"></i></button>
+                        <!-- Così eseguo all'invio @keyup.enter="print(contatto[contattoAttivo].msg)" -->
+                        <input v-model="addText" @keyup.enter="print(contatto[contattoAttivo].msg)" type="text"
+                            class="form-control text-secondary mx-3 text-secondary" placeholder="Scrivi un messaggio"
+                            aria-label="Username" aria-describedby="basic-addon1">
+                        <button @click="print(contatto[contattoAttivo].msg)"
+                            class="border-0 text-secondary bg-transparent"><i
+                                class="fa-solid fa-paper-plane"></i></button>
                         <a href="#" class="text-secondary"><i
                                 class="fa-solid fa-microphone mx-3 text-secondary"></i></a>
 

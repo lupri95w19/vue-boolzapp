@@ -19,7 +19,7 @@ const configurazione = {
             nomeContatto: 'prova',
             text: "",
             addText: "",
-            search : "",
+            search: "",
             contatto: [
 
                 {
@@ -69,7 +69,261 @@ const configurazione = {
                             stato: 'received'
                         }
                     ],
+                    img: './img/avatar_8.jpg',
+                    ultimoAccesso: 'oggi alle 12:00',
+                    visible: true,
+
+                },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Hai portato a spasso il cane?',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Rispondimi?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo?',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
+
+                },
+                {
+                    nome: 'Manuel',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_3.jpg',
+                    ultimoAccesso: 'ultimo accesso martedì alle 13:00',
+                    visible: true,
+
+                },
+                {
+                    nome: 'Alessandro B.',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Hai portato a spasso il cane?',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Rispondimi?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo?',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_4.jpg',
+                    ultimoAccesso: 'online',
+                    visible: true,
+
+                },
+                {
+                    nome: 'Alberto',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Hai portato a spasso il cane?',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Rispondimi?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:50:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
                     img: './img/avatar_1.jpg',
+                    ultimoAccesso: 'oggi alle 12:00',
+                    value: "user",
+                    ownUser: false,
+                    visible: true,
+                },
+
+                {
+                    nome: 'Gigi',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_8.jpg',
+                    ultimoAccesso: 'oggi alle 12:00',
+                    visible: true,
+
+                },
+                {
+                    nome: 'Fabio',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Hai portato a spasso il cane?',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Rispondimi?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo?',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_2.jpg',
+                    ultimoAccesso: 'ultimo accesso ieri alle 13:00',
+                    visible: true,
+
+                },
+                {
+                    nome: 'Manuel',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_3.jpg',
+                    ultimoAccesso: 'ultimo accesso martedì alle 13:00',
+                    visible: true,
+
+                },
+                {
+                    nome: 'Alessandro B.',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Hai portato a spasso il cane?',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Rispondimi?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo?',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_4.jpg',
+                    ultimoAccesso: 'online',
+                    visible: true,
+
+                },
+                {
+                    nome: 'Alberto',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Hai portato a spasso il cane?',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Rispondimi?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:50:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_1.jpg',
+                    ultimoAccesso: 'oggi alle 12:00',
+                    value: "user",
+                    ownUser: false,
+                    visible: true,
+                },
+
+                {
+                    nome: 'Gigi',
+                    msg: [
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Non so più cosa inventarmi',
+                            stato: 'sent'
+
+                        },
+                        {
+                            data: '10/01/2020 15:40:55',
+                            messaggio: 'Hai qualche suggerimento?',
+                            stato: 'sent'
+                        },
+                        {
+                            data: '10/01/2020 15:30:55',
+                            messaggio: 'Va bene a dopo',
+                            stato: 'received'
+                        }
+                    ],
+                    img: './img/avatar_8.jpg',
                     ultimoAccesso: 'oggi alle 12:00',
                     visible: true,
 
@@ -479,9 +733,15 @@ const configurazione = {
     },
     methods:
     {
+        // cambiaChat(indice) {
+        //     this.contattoAttivo = indice;
+        //     // Quando usato nel ciclo for dei contatti, indice viene sostituito alla i in quel caso, e quindi al click cambia il contatto attivo in i
+        // },
         cambiaChat(indice) {
-            this.contattoAttivo = indice;
-            // Quando usato nel ciclo for dei contatti, indice viene sostituito alla i in quel caso, e quindi al click cambia il contatto attivo in i
+            this.contattoAttivo = indice; // Imposta l'indice del contatto attivo
+
+            // Aggiorna i dettagli del contatto attivo
+            this.contattoSingolo = this.contatto[indice]; // Assicurati che 'contatto' contenga i dettagli dei contatti
         },
         getClass(indice) {
             if (indice == 'sent') {
@@ -505,40 +765,40 @@ const configurazione = {
 
         print(indice) {
             if (this.addText.length > 0) {
-                console.log(indice)
+                console.log(indice);
 
                 const now = new Date();
-                const hours = now.getHours();
-                const minutes = now.getMinutes();
-                const formattedTime = `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
-                const dataProva = Date().slice(5).slice(0, -43)
+                const day = now.getDate().toString().padStart(2, '0'); // Giorno
+                const month = (now.getMonth() + 1).toString().padStart(2, '0'); // Mese (ricorda di aggiungere 1)
+                const year = now.getFullYear(); // Anno
+                const hours = now.getHours().toString().padStart(2, '0'); // Ore
+                const minutes = now.getMinutes().toString().padStart(2, '0'); // Minuti
+                const seconds = now.getSeconds().toString().padStart(2, '0'); // Secondi
 
-                // const currDate = Date.now();
-                // const dt = new Date(currDate);
-                // console.log(dt.getHours() + ":" + dt.getMinutes());
-                // const dataMessaggio = dt.getHours() + ":" + dt.getMinutes();
-                b = {
-                    data: dataProva, //da chiedere, perché non mi aggiunge l'ora? col this da errori per lo slice
-                    messaggio: this.addText, // Da chiedere quel this mi ha fatto perdere 20 minuti di tempo, però in console spunta un errore... IT JUST WORKS
+                // Formattare la data e l'ora
+                const formattedTime = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+
+                const b = {
+                    data: formattedTime, // Usa il formato appena creato
+                    messaggio: this.addText,
                     stato: 'sent'
-                }
+                };
+
                 indice.push(b);
                 this.addText = "";
-                clearTimeout()
+
                 setTimeout(() => {
-                    console.log(indice),
-                        c = {
-                            data: dataProva, //da chiedere, perché non mi aggiunge l'ora? col this da errori per lo slice
-                            messaggio: "Ok", // Da chiedere quel this mi ha fatto perdere 20 minuti di tempo, però in console spunta un errore... IT JUST WORKS
-                            stato: 'Received'
-                        },
-                        indice.push(c);
+                    console.log(indice);
+                    const c = {
+                        data: formattedTime, // Usa lo stesso formato per la risposta
+                        messaggio: "Ok",
+                        stato: 'Received'
+                    };
+                    indice.push(c);
                 }, 1000);
-                //Non ho ben capito come impostare il timeout nelle funzioni con vue
-
             }
-
         },
+
         remove(indice) {
             indice.pop(0);
         },
@@ -552,13 +812,14 @@ const configurazione = {
         find() {
             for (let i = 0; i < this.contatto.length; i++) {
                 let contatto = this.contatto[i];
-                if (contatto.nome.startsWith(this.search) || contatto.nome.toLowerCase().startsWith(this.search) || contatto.nome.toUpperCase().startsWith(this.search)) {
+                // Assicurati di rimuovere i controlli sul maiuscolo/minuscolo per semplificare la ricerca
+                if (contatto.nome.toLowerCase().startsWith(this.search.toLowerCase())) {
                     contatto.visible = true;
                 } else {
                     contatto.visible = false;
                 }
             }
-        }
+        },
 
     },
     computed: {
