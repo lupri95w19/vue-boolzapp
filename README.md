@@ -11,4 +11,4 @@ Ogni messaggio inviato farà si che dopo 3 secondi il contatto risponda con un "
 Nella SearchBar possiamo ricercare un determinato contatto.
 
 # Progettazione #
-Vue è stato utilizzato per realizzare tutta la web-app, mentre con Bootstrap mi sono occupato della parte inerente allo stile.
+Il progetto è stato realizzato utilizzando HTML, CSS, Vue e Bootstrap.
