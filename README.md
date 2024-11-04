@@ -1,4 +1,4 @@
-# Boolflix #
+# Boolzapp #
 Il progetto prevedeva di realizzare una replica della web-app di Whatsapp.
 
 ## Interfaccia ##
