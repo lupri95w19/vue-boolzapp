@@ -11,4 +11,4 @@ Ogni messaggio inviato farà si che dopo 3 secondi il contatto risponda con un "
 Nella SearchBar possiamo ricercare un determinato contatto.
 
 # Progettazione #
-Il progetto è stato realizzato utilizzando HTML, CSS, Vue e Bootstrap.
+Il progetto è stato realizzato utilizzando HTML, CSS, JavaScript e Bootstrap.
